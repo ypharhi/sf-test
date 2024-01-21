@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <script src="ej2.min.js" type="text/javascript"></script> 
+    <script src="ej2.min.js" type="text/javascript"></script>
     <link href="material.css" rel="stylesheet">
 
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -16,32 +16,65 @@
         }
 
         .custom-header {
-                background-color: #4CAF50; /* Example: Green background */
-                color: white; /* Optional: Change text color */
-            }
+            background-color: #a7cfa9;
+            /* Example: Green background */
+            color: white;
+            /* Optional: Change text color */
+        }
 
-            .e-headercell {
-            background-color: #4CAF50; /* Example: Green background */
-            color: white; /* Optional: Change text color */
+        .e-headercell {
+            background-color: #a7cfa9;
+            /* Example: Green background */
+            color: white;
+            /* Optional: Change text color */
         }
 
         .e-grid .e-gridpager {
-    width: 100%; /* Make sure the pager takes the full width */
-}
+            width: 100%;
+            /* Make sure the pager takes the full width */
+        }
 
-.e-grid .e-headercell, .e-grid .e-filterbarcell {
-    background-color: #4CAF50; /* Green background */
-}
+        .e-grid .e-headercell,
+        .e-grid .e-filterbarcell {
+            background-color: #a7cfa9;
+            /* Green background */
+        }
 
-.e-grid .e-sortfilterdiv {
-    background-color: #4CAF50; /* Green background */
-}
-
+        .e-grid .e-sortfilterdiv {
+            background-color: #a7cfa9;
+            /* Green background */
+        }
     </style>
 </head>
 
 <body>
-      
+
+    <div class="col-lg-12 control-section">
+        <div id="signature-control">
+            <div class='e-sign-heading'>
+                <span id="signdescription">Sign below</span>
+                <span class="e-btn-options">
+                    <button id="signsave" title="Save signature as PNG" class="e-control e-btn e-primary e-sign-save">SAVE</button>
+                    <button id="signclear" class="e-control e-btn e-primary e-sign-clear">CLEAR</button>
+                </span>
+            </div>
+            <canvas id="signature" style="height: 
+            200px; width:70%; border: 1px solid #D3D3D3;  
+              "></canvas>
+        </div>
+    </div>
+
+    <div class="col-lg-12 control-section">
+        <div id="colorpicker-control">
+            <h4>Choose a color</h4>
+            <input id="color-picker" type="color">
+        </div>
+    </div>
+   
+    <div class="col-lg-12 control-section">
+        <div id="Grid"></div>
+    </div>
+
     <div class="stackblitz-container material">
         <div class="col-lg-12 control-section">
             <div class="content-wrapper">
@@ -172,41 +205,15 @@
                 </div>
             </div>
         </div> 
-        <div id="colorpicker-control">
-            <h4>Choose a color</h4>
-            <input id="color-picker" type="color">
-        </div>
-
-        <div id="Grid"></div>
-
-        <div class="col-lg-12 control-section">
-            <div id="signature-control">
-                <div class='e-sign-heading'>
-                    <span id="signdescription">Sign below</span>
-                    <span class="e-btn-options">
-                        <button id="signsave" title="Save signature as PNG" class="e-control e-btn e-primary e-sign-save">SAVE</button>
-                        <button id="signclear" class="e-control e-btn e-primary e-sign-clear">CLEAR</button>
-                    </span>
-                </div>
-                <canvas id="signature" style="height: 
-                200px; width: 100%; border: 1px solid #D3D3D3;  
-                  "></canvas>
-            </div>
-        </div>
-
-        
-      
-
         <style>
             .e-upload-picture::before {
                 content: '\e60f';
                 font-family: e-icons;
                 font-size: 14px;
             }
-
-          
         </style>
     </div>
 </body>
 <script src="index.js" type="text/javascript"></script>
+
 </html>

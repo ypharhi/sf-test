@@ -51,12 +51,10 @@ document.getElementById('signsave').onclick = function (e) {
     var canvas = document.getElementById('signature');
 
     // Convert the canvas to a data URL (base64 string)
-    var dataURL = canvas.toDataURL();
+    var dataURL = canvas.toDataURL();  
 
     // The dataURL now contains your signature as a base64 encoded string
-    console.log(dataURL);
-
-    //clear it after saving
+    console.log(dataURL); 
 
     signature.clear();
 
@@ -116,8 +114,6 @@ grid.filterSettings = {
     mode: 'Immediate'
 };
 
- 
-
 grid.addEventListener('dataBound', function() {
     // Adding event listeners after the grid has been rendered
     grid.addEventListener('columnResizeStop', function(args) {
@@ -130,6 +126,8 @@ grid.addEventListener('dataBound', function() {
         grid.refresh();
     });
 });
+
+
 
 
  
